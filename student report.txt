@@ -1,0 +1,71 @@
+package packagejava;
+import java.util.Scanner;
+public class StudentReportingSystem {
+ @SuppressWarnings("resource")
+public static void main(String[] args) {
+		Scanner Scanner = new Scanner(System.in);
+        int choice;
+        float avgMarks;
+        int semester;
+        float englishMarks = 0, mathsMarks = 0, scienceMarks = 0;
+        String studentName = null;
+        float highestAvg;
+        String topStudentName;
+ 
+        System.out.println("Welcome to Student Reporting System!");
+        System.out.println("Choose Your Option:");
+        System.out.println("1. Add Student");
+        System.out.println("2. Add Marks of Student");
+        System.out.println("3. Reports");
+        System.out.println("4. Delete Marks of Student");
+        System.out.println("5. Delete Student");
+        System.out.println("6. Exit");
+        choice = Scanner.nextInt();
+ 
+        switch (choice) {
+            case 1:
+                System.out.println("Enter student name: ");
+                studentName = Scanner.nextLine();
+                break;
+            case 2:
+                System.out.println("Enter student name: ");
+                studentName = Scanner.nextLine();
+                System.out.println("Enter semester: ");
+                semester = Scanner.nextInt();
+                System.out.println("Enter English marks: ");
+                englishMarks = Scanner.nextFloat();
+                System.out.println("Enter Maths marks: ");
+                mathsMarks = Scanner.nextFloat();
+                System.out.println("Enter Science marks: ");
+                scienceMarks = Scanner.nextFloat();
+                break;
+            case 3:
+                System.out.println("Average Percentage of Whole Class in Recent Semester: ");
+                avgMarks = (englishMarks + mathsMarks + scienceMarks) / 3;
+                System.out.println("Average Marks of Students in a Subject: ");
+                avgMarks = (englishMarks + mathsMarks + scienceMarks) / 3;
+                System.out.println("Top 2 Consistent Students Across All Semesters (Maximum Average Marks): ");
+                highestAvg = (englishMarks + mathsMarks + scienceMarks) / 3;
+                topStudentName = studentName;
+                break;
+            case 4:
+                System.out.println("Enter semester: ");
+                semester = Scanner.nextInt();
+                System.out.println("Enter subject: ");
+                String subject = Scanner.nextLine();
+                break;
+            case 5:
+                System.out.println("Enter student name: ");
+                studentName = Scanner.nextLine();
+                break;
+            case 6:
+                System.out.println("Exiting the System....");
+                break;
+            default:
+                System.out.println("Invalid Choice!");
+                break;
+        }
+ 
+    }
+ 
+}
